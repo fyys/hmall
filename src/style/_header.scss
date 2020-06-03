@@ -1,0 +1,121 @@
+$width: 1240px;
+$height: 790px;
+$color: #d42525;
+@mixin contentBox {
+    width: $width;
+    height: $height;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 10px;
+    background-color: burlywood;
+}
+@mixin font5524 {
+    color: #555555;
+    font-size: 24px;
+}
+@mixin font5514 {
+    color: #555555;
+    font-size: 14px;
+}
+@mixin fontd414 {
+    color: #d42525;
+    font-size: 14px;
+}
+
+@mixin overflow {
+    content: " ";
+    display: block;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+    clear: both;
+}
+
+#header {
+    width: 100%;
+    height: 189px;
+    background-color: rosybrown;
+    .top-nav {
+        width: 100%;
+        height: 33px;
+        background-color: #f2f2f2;
+        section {
+            width: $width;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            article {
+                width: 260px;
+                height: 100%;
+                line-height: 32px;
+                @include font5514();
+            }
+        }
+        ul {
+            display: flex;
+            align-items: center;
+            li {
+                @include font5514();
+                padding: 0 8px;
+                position: relative;
+                display: flex;
+                align-items: center;
+            }
+            li:nth-child(2n) {
+                padding: 0;
+                margin: 0 2px;
+                border-left: 1px solid #f2f2f2;
+                border-right: 1px solid #f2f2f2;
+                width: 1px;
+                height: 15px;
+                background-color: #dddddd;
+            }
+        }
+        a {
+            padding: 0 8px;
+            display: flex;
+            align-items: center;
+            &:hover {
+                color: $color;
+            }
+            &:hover i {
+                border-top: 1px solid #d42525;
+                border-right: 1px solid #d42525;
+            }
+            .bottom_arrows {
+                float: right;
+                width: 5px;
+                height: 5px;
+                border-top: 1px solid #555555;
+                border-right: 1px solid #555555;
+                transform: rotate(135deg);
+                margin-left: 10px;
+            }
+            .fa {
+                font-family: FontAwesome;
+                &::after {
+                    content: "\f029";
+                }
+            }
+        }
+    }
+    .box {
+        width: 100%;
+        height: 110px;
+        background-color: #ffffff;
+        right: 0;
+    }
+    .bottom-nav {
+        width: 100%;
+        height: 46px;
+        background-color: #333333;
+    }
+    .fixed {
+        height: 85px;
+        border-bottom: 1px solid #eaeaea;
+        box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+        z-index: 100;
+        right: 0;
+        top: -85px;
+    }
+}

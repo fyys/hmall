@@ -1,0 +1,1 @@
+"use strict";!function(s){var o=s(".box");s(window).on("scroll",function(){143<=s(window).scrollTop()?o.stop().css({position:"fixed"}).addClass("fixed").animate({top:0},200,"swing"):o.stop().css({position:"static"}).removeClass("fixed").animate({top:-110},200,"swing")})}(jQuery);

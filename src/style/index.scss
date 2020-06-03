@@ -1,0 +1,78 @@
+@import "header.scss";
+#loutinav {
+    width: 35px;
+    position: fixed;
+    top: 100px;
+    left: 50px;
+    border: 1px solid #ddd;
+    display: none;
+    li {
+        width: 35px;
+        height: 32px;
+        border-bottom: 1px dotted #dddddd;
+        text-align: center;
+        position: relative;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px 0;
+        background: #918888;
+        color: #fff;
+        span {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 35px;
+            height: 32px;
+            padding: 10px 0;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        &:hover {
+            background: red;
+        }
+    }
+}
+#main-louceng {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .louceng {
+        @include contentBox();
+        .title {
+            width: $width;
+            height: 46px;
+            margin: 40px auto 20px;
+            display: flex;
+            justify-content: center;
+            fieldset {
+                width: 504px;
+                height: 46px;
+                border-top: 1px solid #333333;
+                text-align: center;
+                legend {
+                    padding: 0 48px;
+                    line-height: 36px;
+                    height: 36px;
+                    @include font5524();
+                }
+            }
+        }
+        .col-l {
+            height: 662px;
+            width: 232px;
+            // margin-right:-10px;
+            border: 1px solid #dedede;
+        }
+        .col-r {
+            width: 988px;
+            height: 662px;
+            margin-left: 10px;
+            border: 1px solid #dedede;
+            // background-color: red;
+        }
+    }
+}
