@@ -40,13 +40,13 @@ gulp.task("server", done => {
 });
 
 //2.复制文件
-gulp.task('copyfile', () => {
+gulp.task('copylibs', () => {
     return gulp.src('src/libs/*.js')
         .pipe(gulp.dest('dist/libs'));
 });
 
-gulp.task('copyfile1', () => {
-    return gulp.src('src/fonts/*.woff')
+gulp.task('copyfonts', () => {
+    return gulp.src('src/fonts/**')
         .pipe(gulp.dest('dist/fonts'));
 });
 
@@ -107,8 +107,6 @@ gulp.task("watch", done => {
     gulp.watch("src/style/*.scss", gulp.series("compilesass"));
     gulp.watch("src/js/*.js", gulp.series("uglifyjs"));
     gulp.watch("src/img/**", gulp.series("uglifyimg"));
-    gulp.watch("src/libs/*.js", gulp.series("copyfile"));
-    gulp.watch("src/libs/*.js", gulp.series("copyfile1"));
     done();
 });
 // gulp.task('default', () => {

@@ -1,5 +1,4 @@
 ! function ($) {
-    
     const $box = $('.box')
     $(window).on('scroll', function () {
         let $top = $(window).scrollTop()
