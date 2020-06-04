@@ -1,13 +1,99 @@
-// @import "command.scss";
+@import "style.scss";
 #footer {
-    // width: 100%;
-    // height: 342px;
-}
-.footer-main {
-    width: $width;
     width: 100%;
-    margin: 0 auto;
-    background-color: rebeccapurple;
-    background-color: red;
-    z-index: 5000;
+    height: 342px;
+    background-color: #1f2021;
+    .ft {
+        width: $width;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+    }
+}
+.footer-top {
+    width: 100%;
+    padding: 40px 0;
+    background-color: #ffffff;
+    dl {
+        width: 240px;
+        height: 48px;
+        display: flex;
+        align-items: center;
+        .icon-1 {
+            width: 60px;
+            height: 48px;
+            background: url(http://www.hmall.net/themes/default/images/promise.png) no-repeat;
+        }
+        .icon-2 {
+            width: 60px;
+            height: 48px;
+            background: url(http://www.hmall.net/themes/default/images/promise.png) -60px no-repeat;
+        }
+        .icon-3 {
+            width: 60px;
+            height: 48px;
+            background: url(http://www.hmall.net/themes/default/images/promise.png) -120px no-repeat;
+        }
+        .icon-4 {
+            width: 60px;
+            height: 48px;
+            background: url(http://www.hmall.net/themes/default/images/promise.png) -180px no-repeat;
+        }
+        .icon-5 {
+            width: 60px;
+            height: 48px;
+            background: url(http://www.hmall.net/themes/default/images/promise.png) -240px no-repeat;
+        }
+        dd {
+            p {
+                @include font7714();
+            }
+            .title {
+                font-weight: bolder;
+                @include font5516();
+            }
+        }
+    }
+}
+
+.footer-bottom {
+    display: flex;
+    flex-direction: column;
+    .footer-main {
+        display: flex;
+        padding: 20px 0;
+        border-bottom: 1px solid #666666;
+    }
+    ul {
+        display: flex;
+        flex-direction: column;
+        .title {
+            @include fontcc16();
+            padding-bottom: 10px;
+        }
+        li {
+            width: 200px;
+            height: 28px;
+
+            a {
+                @include font9914();
+            }
+        }
+    }
+    .sub-5 {
+        li {
+            @include font9914();
+            width: 440px;
+        }
+    }
+    .final {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        @include font9914();
+        a {
+            @include font9914();
+        }
+    }
 }

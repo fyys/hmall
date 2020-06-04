@@ -1,7 +1,7 @@
 ! function ($) {
     const $loutinav = $('#loutinav');
     const $louti = $('#loutinav li');
-    const $louceng = $('#main .louceng')
+    const $louceng = $('#main-louceng .louceng')
     const $loucengLast = $('#loutinav ul li.last')
 
     function gunlun() {
@@ -30,10 +30,10 @@
     // 楼梯定楼层
     $louti.not('.last').on('click', function () {
         $(this).addClass('active').siblings('li').removeClass('active')
-
         $(window).off()
-
-        let $loucengtop = $louceng.eq($(this).index()).offset().top; //获取楼层top值
+        
+        //获取楼层top值
+        let $loucengtop = $louceng.eq($(this).index()).offset().top;
 
         $('html,body').animate({
             scrollTop: $loucengtop
@@ -42,7 +42,6 @@
                 gunlun();
             });
         });
-
     })
 
     //返回顶部

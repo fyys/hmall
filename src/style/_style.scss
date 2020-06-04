@@ -1,0 +1,67 @@
+$width: 1240px;
+$height: 790px;
+$color: #d42525;
+@mixin contentBox {
+    width: $width;
+    height: $height;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 10px;
+    background-color: burlywood;
+}
+@mixin font5524 {
+    color: #555555;
+    font-size: 24px;
+}
+@mixin fontff14 {
+    color: #ffffff;
+    font-size: 14px;
+}
+@mixin font6614 {
+    color: #666666;
+    font-size: 14px;
+}
+@mixin font6612 {
+    color: #666666;
+    font-size: 12px;
+}
+@mixin fontcc16 {
+    color: #cccccc;
+    font-size: 16px;
+}
+@mixin font5514 {
+    color: #555555;
+    font-size: 14px;
+}
+@mixin font9914 {
+    color: #999999;
+    font-size: 14px;
+}
+@mixin font5516 {
+    color: #555555;
+    font-size: 16px;
+}
+@mixin font7714 {
+    color: #777777;
+    font-size: 14px;
+}
+@mixin font3314 {
+    color: #333333;
+    font-size: 14px;
+}
+@mixin fontd414 {
+    color: #d42525;
+    font-size: 14px;
+}
+@mixin fontf216 {
+    color: #f2f2f2;
+    font-size: 16px;
+}
+@mixin overflow {
+    content: " ";
+    display: block;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+    clear: both;
+}
