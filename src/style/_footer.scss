@@ -1,0 +1,13 @@
+// @import "command.scss";
+#footer {
+    // width: 100%;
+    // height: 342px;
+}
+.footer-main {
+    width: $width;
+    width: 100%;
+    margin: 0 auto;
+    background-color: rebeccapurple;
+    background-color: red;
+    z-index: 5000;
+}

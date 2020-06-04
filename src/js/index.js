@@ -7,12 +7,12 @@
     function gunlun() {
         let $top = $(window).scrollTop();//滚条的top
         //楼梯出现
-        $top >= 600 ? $loutinav.show() : $loutinav.hide();
+        $top >= 500 ? $loutinav.show() : $loutinav.hide();
 
         $(window).on('scroll', function () {
             let $top = $(window).scrollTop()//滚条的top
             //楼梯出现
-            $top >= 600 ? $loutinav.show() : $loutinav.hide()
+            $top >= 500 ? $loutinav.show() : $loutinav.hide()
 
             // 楼层定楼梯
             $louceng.each(function (index, element) {
