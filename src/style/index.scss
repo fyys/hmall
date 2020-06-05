@@ -72,9 +72,10 @@
             }
         }
         .col-l {
-            height: 662px;
+            height: 652px;
             width: 232px;
             border: 1px solid #dedede;
+            margin-bottom: 10px;
         }
         .col-r {
             width: 988px;
@@ -114,6 +115,7 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
+        align-content: space-between;
     }
     .col-1 {
         width: 232px;
