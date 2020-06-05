@@ -1,3 +1,139 @@
 @import "header.scss";
 @import "footer.scss";
 @import "style.scss";
+
+#cart {
+    width: $width;
+    margin: 0 auto;
+    // background-color: red;
+    .cart-header {
+        border-top: 1px solid #dddddd;
+        margin-top: 20px;
+        height: 40px;
+        li {
+            text-align: center;
+            padding: 10px 8px;
+            @include font3314();
+        }
+    }
+    .goods {
+        display: flex;
+        flex-direction: column;
+        li {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 10px 8px;
+            @include font3314();
+        }
+        .li-5 {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+    }
+    .goods-main,
+    .txt {
+        display: flex;
+        border-bottom: 1px solid #dddddd;
+        .li-1 {
+            width: 10%;
+            img {
+                width: 50px;
+                height: 50px;
+            }
+        }
+        .li-2 {
+            width: 25%;
+            a {
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: -webkit-box;
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;
+            }
+        }
+        .li-3 {
+            width: 15%;
+        }
+        .li-4 {
+            width: 10%;
+        }
+        .li-5 {
+            width: 10%;
+            @include font3314();
+            a {
+                height: 26px;
+                width: 26px;
+                text-align: center;
+                border: 1px solid #e2e2e2;
+                font-size: 20px;
+                line-height: 26px;
+            }
+            input {
+                display: block;
+                width: 50px;
+                height: 26px;
+                text-align: center;
+                font-size: 14px;
+                border: 1px solid #dddddd;
+                padding: 0;
+            }
+            p {
+                @include font3314();
+            }
+        }
+        .li-6 {
+            width: 15%;
+        }
+        .li-7 {
+            width: 10%;
+        }
+        .li-8 {
+            width: 5%;
+            span {
+                color: red;
+            }
+        }
+    }
+    .cart-footer {
+        width: $width;
+        margin: 0 auto;
+        .sum {
+            background-color: #f0f0f0;
+            padding: 10px;
+            margin: 20px 0;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            span {
+                @include font3314();
+            }
+            p {
+                font-size: 24px;
+                color: #333333;
+                font-weight: bolder;
+            }
+        }
+        .btn {
+            display: flex;
+            justify-content: flex-end;
+            div {
+                padding: 6px 24px;
+            }
+        }
+        .btn-shopping {
+            background-color: #cccccc;
+            a {
+                @include font3314();
+            }
+        }
+        .btn-over {
+            margin-left: 20px;
+            background-color: $color;
+            a {
+                @include fontff14();
+            }
+        }
+    }
+}

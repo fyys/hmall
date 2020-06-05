@@ -19,30 +19,12 @@
         height: 48px;
         display: flex;
         align-items: center;
-        .icon-1 {
-            width: 60px;
-            height: 48px;
-            background: url(http://www.hmall.net/themes/default/images/promise.png) no-repeat;
-        }
-        .icon-2 {
-            width: 60px;
-            height: 48px;
-            background: url(http://www.hmall.net/themes/default/images/promise.png) -60px no-repeat;
-        }
-        .icon-3 {
-            width: 60px;
-            height: 48px;
-            background: url(http://www.hmall.net/themes/default/images/promise.png) -120px no-repeat;
-        }
-        .icon-4 {
-            width: 60px;
-            height: 48px;
-            background: url(http://www.hmall.net/themes/default/images/promise.png) -180px no-repeat;
-        }
-        .icon-5 {
-            width: 60px;
-            height: 48px;
-            background: url(http://www.hmall.net/themes/default/images/promise.png) -240px no-repeat;
+        @for $i from 1 to 6 {
+            .icon-#{$i} {
+                width: 60px;
+                height: 48px;
+                background: url(http://www.hmall.net/themes/default/images/promise.png) -($i - 1) * 60 + px no-repeat;
+            }
         }
         dd {
             p {
