@@ -1,0 +1,209 @@
+@import "header.scss";
+@import "footer.scss";
+@import "style.scss";
+.main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    // 面包屑
+    .area-bg {
+        width: 100%;
+        background-color: #f5f5f5;
+        height: 40px;
+        margin-bottom: 20px;
+        .goods-area {
+            width: 1240px;
+            height: 100%;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            @include font3314();
+        }
+    }
+    // 信息
+    .cart_content {
+        width: $width;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        .showData {
+            height: 422px;
+            margin-left: 50px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            width: 680px;
+            .price {
+                color: $color;
+                font-size: 30px;
+                height: 77px;
+                width: 100%;
+                display: flex;
+                align-items: center;
+            }
+            .line {
+                width: 100%;
+                padding: 5px 0;
+                border-bottom: 1px solid #cccccc;
+            }
+        }
+        .name {
+            width: 100%;
+            h2 {
+                color: #333333;
+                font-size: 28px;
+                font-weight: bold;
+                @include overflow();
+            }
+            p {
+                float: right;
+                color: #878787;
+                font-size: 14px;
+            }
+        }
+        .line-title {
+            border-top: 1px solid #dedede;
+            padding-bottom: 10px;
+            overflow: hidden;
+            legend {
+                text-align: center;
+                padding: 0 2em;
+                font-size: 14px;
+                color: #000000;
+            }
+        }
+    }
+    .buy {
+        display: flex;
+        // align-items: center;
+        flex-direction: column;
+        flex-wrap: wrap;
+        > div {
+            margin-right: 30px;
+        }
+    }
+    .num {
+        display: flex;
+        align-items: center;
+        margin: 10px 0 20px;
+        @include font3314();
+        a {
+            height: 26px;
+            width: 26px;
+            text-align: center;
+            border: 1px solid #e2e2e2;
+            font-size: 20px;
+            line-height: 26px;
+        }
+        input {
+            display: block;
+            width: 50px;
+            height: 26px;
+            text-align: center;
+            font-size: 14px;
+            border: 1px solid #dddddd;
+            padding: 0;
+        }
+        p {
+            @include font3314();
+        }
+    }
+    .buy_btn {
+        display: flex;
+        a {
+            display: inline-block;
+            margin-right: 20px;
+            font-size: 18px;
+            color: #ffffff;
+            width: 172px;
+            height: 46px;
+            text-align: center;
+            line-height: 46px;
+        }
+        .btn_a {
+            background-color: #f0af4e;
+            &:hover {
+                opacity: 0.8;
+            }
+        }
+        .btn_b {
+            background-color: #d42525;
+            &:hover {
+                opacity: 0.8;
+            }
+        }
+        .btn_c {
+            background-color: #5bc0de;
+            &:hover {
+                opacity: 0.8;
+            }
+        }
+    }
+    // 放大镜
+    #zoomBox {
+        position: relative;
+        width: 420px;
+        height: 420px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        border: 1px solid #cecece;
+        margin-left: 70px;
+        img {
+            display: block;
+            border: none;
+        }
+        #midArea {
+            width: 420px;
+            height: 420px;
+            overflow: hidden;
+            img {
+                width: 420px;
+                height: 420px;
+            }
+            #zoom {
+                display: none;
+                position: absolute;
+                width: 200px;
+                height: 200px;
+                background-color: yellow;
+                opacity: 0.3;
+                filter: alpha(opacity=30);
+            }
+        }
+        #bigArea {
+            display: none;
+            position: absolute;
+            left: 420px;
+            top: -1px;
+            width: 420px;
+            height: 420px;
+            border: 1px solid #cecece;
+            overflow: hidden;
+            img {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 800px;
+                height: 800px;
+            }
+        }
+        #smallArea {
+            position: absolute;
+            left: -60px;
+            height: 400px;
+            // white-space: nowrap;
+            // overflow-y: scroll;
+            // overflow-x: hidden;
+            display: flex;
+            flex-direction: column;
+            img {
+                width: 50px;
+                height: 50px;
+                margin-top: 10px;
+                cursor: pointer;
+            }
+        }
+    }
+}

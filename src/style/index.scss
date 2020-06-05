@@ -74,6 +74,7 @@
         .col-l {
             height: 652px;
             width: 232px;
+            margin-bottom: 10px;
             border: 1px solid #dedede;
             margin-bottom: 10px;
         }
@@ -154,6 +155,11 @@
                     color: $color;
                 }
             }
+            a {
+                display: block;
+                @include overflow();
+            }
+
             .price {
                 @include fontd414();
             }
@@ -187,7 +193,7 @@
             padding: 20px 0 16px;
             background: rgba($color: #fff, $alpha: 0.5);
             .name {
-                width: 100%;
+                width: 470px;
                 padding: 6px 0;
                 margin-left: 10px;
                 @include font5514();
@@ -195,12 +201,17 @@
                     color: $color;
                 }
             }
+            a {
+                display: block;
+                @include overflow();
+            }
             .price {
                 margin-left: 10px;
+                width: 470px;
                 @include fontd414();
             }
         }
-        &:hover img{
+        &:hover img {
             transform: scale(1.1);
         }
     }
