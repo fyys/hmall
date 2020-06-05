@@ -49,7 +49,7 @@
             &:hover {
                 color: #e74503;
             }
-            &:hover i{
+            &:hover i {
                 background-position: -32px -16px;
             }
         }
@@ -123,6 +123,10 @@
     .main {
         margin: 10px;
         .name {
+            a {
+                display: block;
+                @include overflow();
+            }
             @include font5514();
             &:hover a {
                 color: $color;

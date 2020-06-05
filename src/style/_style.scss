@@ -7,7 +7,6 @@ $color: #d42525;
     display: flex;
     flex-wrap: wrap;
     padding: 0 10px;
-    background-color: burlywood;
 }
 @mixin font5524 {
     color: #555555;
@@ -57,11 +56,16 @@ $color: #d42525;
     color: #f2f2f2;
     font-size: 16px;
 }
-@mixin overflow {
+@mixin clear {
     content: " ";
     display: block;
     height: 0;
     overflow: hidden;
     visibility: hidden;
     clear: both;
+}
+@mixin overflow {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }

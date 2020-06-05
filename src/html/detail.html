@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>商品详情</title>
+    <link rel="stylesheet" href="../css/command.css">
+    <link rel="stylesheet" href="../css/detail.css">
+    <link rel="stylesheet" href="../fonts/iconfont.css">
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/1.12.4/jquery.js"></script>
+</head>
+
+<body>
+    <div id="nav"></div>
+    <div id="header"></div>
+
+    <div class="main">
+        <!-- 面包屑 -->
+        <div class="area-bg">
+            <div class="goods-area">
+                <a href="index.html">服饰</a>
+                &nbsp;&nbsp;>&nbsp;&nbsp;
+                <a href="goodslist.html"><span>女装</span></a>
+                &nbsp;&nbsp;>&nbsp;&nbsp;
+                <a href="javascript:void(0)"><span>衬衫</span></a>
+            </div>
+        </div>
+        <!-- 主内容 -->
+        <div class="cart_content">
+            <!-- 放大镜 -->
+            <div id="zoomBox">
+                <div id="smallArea">
+                    <img
+                        src="http://www.hmall.net/data/uploads/2014/05/04/6a63f7365e4430b5d07791fd32c66500.jpg__367_367.jpg">
+                    <img
+                        src="http://www.hmall.net/data/uploads/2014/05/04/6a63f7365e4430b5d07791fd32c66500.jpg__367_367.jpg">
+                </div>
+                <div id="midArea">
+                    <img
+                        src="http://www.hmall.net/data/uploads/2014/05/04/6a63f7365e4430b5d07791fd32c66500.jpg__367_367.jpg">
+                    <div id="zoom"></div>
+                </div>
+                <div id="bigArea">
+                    <img
+                        src="http://www.hmall.net/data/uploads/2014/05/04/6a63f7365e4430b5d07791fd32c66500.jpg__367_367.jpg">
+                </div>
+
+            </div>
+            <!-- 信息 -->
+            <ul class="showData">
+                <li class="name">
+                    <!-- 商品名称 -->
+                    <h2>
+                        BRIOSO格子衬衫 女 长袖2018春装新品上市
+                    </h2>
+                    <p>
+                        <label for="">货号：</label>
+                        <span>NS20140504123</span>
+                    </p>
+                </li>
+                <li class="line"></li>
+                <!-- 商品价格 -->
+                <li class="price">
+                    <span>49.00元</span>
+                </li>
+
+                <fieldset class="line-title">
+                    <legend class="txt">商品规格</legend>
+                </fieldset>
+
+                <!-- 商品购买 -->
+                <li class="buy">
+                    <div class="num">
+                        购买量 &nbsp;&nbsp;&nbsp;&nbsp;
+                        <a href="javascript:void(0)" class="num_add">+</a>
+                        <input type="text" value="1" class="buy_num">
+                        <a href="javascript:void(0)" class="num_del">-</a>
+                        &nbsp;&nbsp;&nbsp;&nbsp;库存：
+                        <p>12</p>
+                    </div>
+                    <div class="buy_btn">
+                        <a href="javascript:void(0)" class="btn_a">
+                            立即购买
+                        </a>
+                        <a href="javascript:void(0)" class="btn_b">加入购物车</a>
+                        <a href="javascript:void(0)" class="btn_c">关注</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+    <div id="footer"></div>
+
+
+    <script>
+        jQuery.noConflict();
+        jQuery(function () {
+            jQuery("#nav").load("nav.html");
+            jQuery("#header").load("header.html");
+            jQuery("#footer").load("footer.html");
+        });
+    </script>
+    <script src="../js/detail-zoom.js"></script>
+    <script src="../js/detail.js"></script>
+</body>
+
+</html>
