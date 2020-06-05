@@ -1,5 +1,6 @@
 @import "header.scss";
 @import "footer.scss";
+@import "style.scss";
 // 幻灯片
 #banner {
     width: 100%;
@@ -33,10 +34,6 @@
             align-items: center;
             width: 35px;
             height: 32px;
-            padding: 10px 0;
-            position: absolute;
-            top: 0;
-            left: 0;
         }
         &:hover {
             background: red;
@@ -61,31 +58,148 @@
             margin: 40px auto 20px;
             display: flex;
             justify-content: center;
-            fieldset {
-                width: 504px;
-                height: 46px;
-                border-top: 1px solid #333333;
-                text-align: center;
-                legend {
-                    padding: 0 48px;
-                    line-height: 36px;
-                    height: 36px;
-                    @include font5524();
-                }
+        }
+        fieldset {
+            width: 504px;
+            height: 46px;
+            border-top: 1px solid #333333;
+            text-align: center;
+            legend {
+                padding: 0 48px;
+                line-height: 36px;
+                height: 36px;
+                @include font5524();
             }
         }
         .col-l {
             height: 662px;
             width: 232px;
-            // margin-right:-10px;
             border: 1px solid #dedede;
         }
         .col-r {
             width: 988px;
             height: 662px;
             margin-left: 10px;
-            border: 1px solid #dedede;
-            // background-color: red;
+        }
+    }
+    .header {
+        width: 232px;
+        height: 500px;
+        overflow: hidden;
+    }
+    img {
+        transition: all 0.6s;
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+    .main {
+        width: 212px;
+        height: 35px;
+        margin: 10px;
+        display: flex;
+        a {
+            display: block;
+            text-align: center;
+            width: 106px;
+            height: 21px;
+            margin: 7px 0;
+            @include font5514();
+            &:hover {
+                color: $color;
+            }
+        }
+    }
+    .row-4 {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .col-1 {
+        width: 232px;
+        height: 320px;
+        margin: 0 5px 10px;
+        border: 1px solid #dedede;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .header {
+            width: 232px;
+            height: 232px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            a {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            img {
+                width: 220px;
+                height: 220px;
+            }
+        }
+        .content {
+            width: 212px;
+            height: 57px;
+            margin: 10px;
+            .name {
+                width: 100%;
+                padding: 6px 0;
+                @include font5514();
+                &:hover a {
+                    color: $color;
+                }
+            }
+            .price {
+                @include fontd414();
+            }
+        }
+    }
+    .col-2 {
+        width: 480px;
+        height: 320px;
+        margin: 0 5px 10px;
+        border: 1px solid #dedede;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        .header {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            img {
+                width: 420px;
+                height: 420px;
+            }
+        }
+        .content {
+            position: absolute;
+            bottom: 0px;
+            width: 100%;
+            height: 57px;
+            padding: 20px 0 16px;
+            background: rgba($color: #fff, $alpha: 0.5);
+            .name {
+                width: 100%;
+                padding: 6px 0;
+                margin-left: 10px;
+                @include font5514();
+                &:hover a {
+                    color: $color;
+                }
+            }
+            .price {
+                margin-left: 10px;
+                @include fontd414();
+            }
+        }
+        &:hover img{
+            transform: scale(1.1);
         }
     }
 }
