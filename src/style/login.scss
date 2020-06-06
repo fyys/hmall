@@ -1,0 +1,84 @@
+@import "style.scss";
+#header-main {
+    margin: 0 auto;
+    width: $width;
+    padding-top: 20px;
+    height: 90px;
+    img {
+        height: 100%;
+    }
+}
+#bg {
+    position: relative;
+    height: 600px;
+    background: url(http://www.hmall.net/themes/default/images/login_bg.png) no-repeat;
+    background-position: 50% 50%;
+    .login {
+        position: absolute;
+        right: 130px;
+        width: 356px;
+        height: 380px;
+        padding: 60px 40px 40px;
+        margin: 60px 24px 0;
+        background-color: #ffffff;
+    }
+    ul {
+        display: flex;
+        flex-direction: column;
+    }
+    li {
+        display: flex;
+        justify-content: space-between;
+        @include font3314();
+        margin: 10px 0;
+        a:hover {
+            color: $color;
+        }
+    }
+    div {
+        display: flex;
+    }
+    label {
+        display: block;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 45px;
+        height: 40px;
+        margin-right: -1px;
+    }
+    input {
+        padding: 0;
+        width: 300px;
+        height: 40px;
+    }
+    .red {
+        border: 1px solid red;
+        .iconfont {
+            color: red;
+        }
+    }
+    .qing {
+        border: 1px solid #06ac87;
+        .iconfont {
+            color: #06ac87;
+        }
+    }
+    .btn{
+        width: 100%;
+        background-color: $color;
+        border: 0;
+        @include fontff14();
+    }
+}
+#footer {
+    width: 100%;
+    background-color: #1f2021;
+    .txt {
+        width: $width;
+        margin: 0 auto;
+        text-align: center;
+        padding-top: 10px;
+        @include font9914();
+    }
+}

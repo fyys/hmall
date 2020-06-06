@@ -1,7 +1,14 @@
-@import "header.scss";
 @import "footer.scss";
 @import "style.scss";
-
+#header-main {
+    margin: 0 auto;
+    width: $width;
+    padding-top: 20px;
+    height: 90px;
+    img {
+        height: 100%;
+    }
+}
 #cart {
     width: $width;
     margin: 0 auto;
