@@ -1,47 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=
-    , initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>注册</title>
     <link rel="stylesheet" href="../css/command.css">
     <link rel="stylesheet" href="../css/logon.css">
     <link rel="stylesheet" href="../fonts/iconfont.css">
     <script src="https://cdn.bootcdn.net/ajax/libs/jquery/1.12.4/jquery.js"></script>
 </head>
+
 <body>
     <!---------- 头部 ---------->
     <div id="header-main">
-        <img src="http://www.hmall.net/static/images/logo.png" alt="">
+        <a href="index.html">
+            <img src="http://www.hmall.net/static/images/logo.png" alt="">
+        </a>
     </div>
-    <form action="" method="" id="myform">
-        <ul>
-            <li>
-                <div>会员登录</div>
-                <div>立即注册</div>
-            </li>
-            <li><label for="username">用户名:</label>
-                <input type="text" id="username">
-                <span class="username"></span></li>
-            <li><label for="password">密码:</label>
-                <input type="password" id="password">
-                <span class="password"></span></li>
-            <li><label for="pass">确认密码:</label>
-                <input type="password" id="pass">
-                <span class="pass"></span></li>
-            <li><label for="email">邮箱:</label>
-                <input type="text" id="email">
-                <span class="email"></span></li>
-            <li>
-                <label for="phone">手机号:</label>
-                <input type="text" id="phone">
-                <span class="phone"></span>
-            </li>
-            <li>
-                <input type="submit" disabled>
-            </li>
-        </ul>
-    </form>
+    <div id="bg">
+        <form action="" method="" class="logon">
+            <ul>
+                <li>
+                    <div>会员注册</div>
+                    <div><a href="login.html">立即登录</a></div>
+                </li>
+                <li>
+                    <div>
+                        <label for="e-mail" class="default">
+                            <span class="iconfont icon-zhanghao"></span>
+                        </label>
+                        <input type="text" id="e-mail" placeholder="邮箱" class="default">
+                        <span class="e-mail"></span></div>
+                </li>
+                <li>
+                    <div>
+                        <label for="password" class="default">
+                            <span class="iconfont icon-mima"></span>
+                        </label>
+                        <input type="password" id="password" placeholder="密码" class="default">
+                        <span class="password"></span></div>
+                </li>
+                <li>
+                    <div>
+                        <label for="password-two" class="default">
+                            <span class="iconfont icon-222yonghu_mima_yuechi2"></span>
+                        </label>
+                        <input type="password-two" id="password-two" placeholder="确认密码" class="default">
+                        <span class="password-two"></span></div>
+                </li>
+
+                <li>
+                    <input class="btn" type="submit" value="登录">
+                </li>
+            </ul>
+        </form>
+    </div>
+    <div id="footer">
+        <div class="txt">
+            hmall商城&copy;2010-2020保留所有权！
+        </div>
+    </div>
 </body>
+
 </html>
