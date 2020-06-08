@@ -117,3 +117,4 @@ gulp.task("watch", done => {
 //     watch(['src/*.html', 'src/sass/*.scss', 'src/script/*.js'], gulp.parallel('uglifyhtml', 'compilesass', 'uglifyjs'));
 // });
 gulp.task("default", gulp.parallel("server", "watch"));
+// gulp.task("default", gulp.parallel("watch"));

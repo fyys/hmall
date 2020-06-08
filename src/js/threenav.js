@@ -1,30 +1,30 @@
 ! function ($) {
-    const $menuli = $('.menu li');//左表
-    const $cartlist = $('.cartlist');//右表
-    const $items = $('.item');//右表内容
-    const $banner = $('.banner');//整体
+    const $navulLeft = $('.nav-ul1>li');//左表
+    const $navliRight = $('.nav-ul2');//右表
+    const $items = $('.nav-ul2>.item');//右表内容
+    const $all = $('.nav-ul1');//整体
 
-    $menuli.hover(function () {
-        $cartlist.show()
-        $(this).addClass('active').siblings('.menu li').removeClass('active');
+    $navulLeft.hover(function () {
+        $navliRight.show()
+        $(this).addClass('threeNav-li2').siblings('.nav-ul1 li').removeClass('threeNav-li2');
         $items.eq($(this).index()).show().siblings('.item').hide();
 
-        if ($(window).scrollTop() > $banner.offset().top) {
-            $cartlist.css({
-                top: $(window).scrollTop() - $banner.offset().top
+        if ($(window).scrollTop() > $all.offset().top) {
+            $navliRight.css({
+                top: $(window).scrollTop() - $all.offset().top
             })
         } else {
-            $cartlist.css({
+            $navliRight.css({
                 top: 0
             })
         }
     }, function () {
-        $cartlist.hide()
+        $navliRight.hide()
     })
 
-    $cartlist.hover(function () {
-        $cartlist.show()
+    $navliRight.hover(function () {
+        $navliRight.show()
     }, function () {
-        $cartlist.hide()
+        $navliRight.hide()
     })
 }(jQuery)

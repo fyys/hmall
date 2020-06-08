@@ -9,8 +9,8 @@
     <link rel="stylesheet" href="../css/goodslist.css">
     <link rel="stylesheet" href="../fonts/iconfont.css">
     <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
-    <script src="thirdplugins/jquery.lazyload.js"></script>
-    <script src="thirdplugins/jquery.pagination.js"></script>
+    <script src="../libs/jquery.lazyload.js"></script>
+    <script src="../libs/jquery.pagination.js"></script>
 </head>
 
 <body>
@@ -20,7 +20,7 @@
     <!---------- 内容 ---------->
     <div id="main">
         <div class="area-bg">
-            <div class="goods-area">服饰</div>
+            <div class="goods-area"><a href="index.html">首页</a>&gt;服饰</div>
         </div>
         <div class="content">
             <h2>服饰 商品筛选</h2>
@@ -46,7 +46,7 @@
             <!-- 商品列表 -->
             <div class="list">
                 <ul class="row-4">
-                    <li class="col">
+                    <!-- <li class="col">
                         <div class="header">
                             <a href="detail.html">
                                 <img
@@ -285,18 +285,18 @@
                             <a href="javascript:void(0)"><span>商品详情</span></a>
                             <a href="javascript:void(0)"><span>关注</span></a>
                         </div>
-                    </li>
+                    </li> -->
                 </ul>
             </div>
             <!-- 页码 -->
             <div class="pagelist">
                 <div class="m-style page">
-                    <span class="up">上一页</span>
+                    <!-- <span class="up">上一页</span>
                     <span class="pagenum">1</span>
                     <span class="down">下一页</span>
                     &nbsp;&nbsp;&nbsp;共<p>1</p>页&nbsp;&nbsp;&nbsp;跳到第
                     <input type="text" value="1">页
-                    <span class="ok">确定</span>
+                    <span class="ok">确定</span> -->
                 </div>
             </div>
         </div>
@@ -314,6 +314,7 @@
             $("#footer").load("footer.html");
         })
     </script>
+    <script src="../js/goodslist.js"></script>
 </body>
 
 </html>

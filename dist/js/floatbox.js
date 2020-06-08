@@ -1,1 +1,0 @@
-"use strict";!function(s){var i=s(".box");s(window).on("scroll",function(){143<=s(window).scrollTop()?i.stop().css({position:"fixed"}).addClass("fixed").animate({top:0},200,"swing").children().css({"padding-top":"5px"}):i.stop().css({position:"static"}).removeClass("fixed").animate({top:-110},200,"swing").children().css({"padding-top":"20px"})})}(jQuery);
