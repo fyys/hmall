@@ -18,12 +18,10 @@
             display: flex;
             align-items: center;
             @include font3314();
-            >a:hover{
-                color:$color;
+            > a:hover {
+                color: $color;
             }
         }
-        
-        
     }
     // 信息
     .cart_content {
@@ -32,27 +30,6 @@
         display: flex;
         flex-direction: row;
         align-items: center;
-        .showData {
-            height: 422px;
-            margin-left: 50px;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-            width: 680px;
-            .price {
-                color: $color;
-                font-size: 30px;
-                height: 77px;
-                width: 100%;
-                display: flex;
-                align-items: center;
-            }
-            .line {
-                width: 100%;
-                padding: 5px 0;
-                border-bottom: 1px solid #cccccc;
-            }
-        }
         .name {
             width: 100%;
             h2 {
@@ -77,6 +54,31 @@
                 font-size: 14px;
                 color: #000000;
             }
+        }
+    }
+    .showData {
+        overflow: hidden;
+        height: 422px;
+        margin-left: 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        width: 680px;
+        .goods-price {
+            color: $color;
+            font-size: 30px;
+            height: 77px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            em {
+                font-style: normal;
+            }
+        }
+        .line {
+            width: 100%;
+            padding: 5px 0;
+            border-bottom: 1px solid #cccccc;
         }
     }
     .buy {
@@ -159,6 +161,49 @@
             display: block;
             border: none;
         }
+        #smallArea {
+            position: absolute;
+            left: -60px;
+            width: 50px;
+            height: 400px;
+            display: flex;
+            flex-direction: column;
+            img {
+                width: 50px;
+                height: 50px;
+                // margin-top: 10px;
+                cursor: pointer;
+            }
+            #smallpic {
+                height: 100%;
+                flex-direction: column;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: clip;
+                position: relative;
+                ul{
+                    position: absolute;
+                    width: 50px;
+                    li{
+                        margin-top: 10px;
+                        width: 50px;
+                        height: 50px;
+                    }
+                }
+            }
+            .up,
+            .down {
+                text-align: center;
+                @include font3314();
+                cursor: pointer;
+            }
+            .down{
+                margin-top: 10px;
+            }
+            .up{
+                transform:rotate(180deg);
+            }
+        }
         #midArea {
             width: 420px;
             height: 420px;
@@ -168,17 +213,17 @@
                 height: 420px;
             }
             #zoom {
-                display: none;
                 position: absolute;
-                width: 200px;
-                height: 200px;
+                top: 0;
+                left: 0;
+                visibility: hidden;
                 background-color: yellow;
                 opacity: 0.3;
                 filter: alpha(opacity=30);
             }
         }
         #bigArea {
-            display: none;
+            visibility: hidden;
             position: absolute;
             left: 420px;
             top: -1px;
@@ -194,21 +239,6 @@
                 height: 800px;
             }
         }
-        #smallArea {
-            position: absolute;
-            left: -60px;
-            height: 400px;
-            // white-space: nowrap;
-            // overflow-y: scroll;
-            // overflow-x: hidden;
-            display: flex;
-            flex-direction: column;
-            img {
-                width: 50px;
-                height: 50px;
-                margin-top: 10px;
-                cursor: pointer;
-            }
-        }
+        
     }
 }

@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="../css/shoppingcart.css">
     <link rel="stylesheet" href="../fonts/iconfont.css">
     <script src="https://cdn.bootcdn.net/ajax/libs/jquery/1.12.4/jquery.js"></script>
+    <script src="../libs/jquery.cookie.js"></script>
 </head>
 
 <body>
@@ -24,6 +25,7 @@
     <div id="cart">
         <div class="cart-header">
             <ul class="txt">
+                <li class="li-0"><input type="checkbox" id="checkAll">全选</li>
                 <li class="li-1">商品</li>
                 <li class="li-2">名称</li>
                 <li class="li-3">规格</li>
@@ -35,7 +37,10 @@
             </ul>
         </div>
         <div class="goods">
-            <ul class="goods-main">
+
+
+            <ul class="goods-main" style="display: none;">
+                <li class="li-0"><input type="checkbox" id="ck" checked="">单选</li>
                 <li class="li-1">
                     <a href="javascript:void(0)">
                         <img src="http://www.hmall.net/data/uploads/2014/05/04/6a63f7365e4430b5d07791fd32c66500.jpg__260_260.jpg"
@@ -64,41 +69,14 @@
                     <span class="iconfont icon-ziyuanldpi"></span>
                 </li>
             </ul>
-            <ul class="goods-main">
-                <li class="li-1">
-                    <a href="javascript:void(0)">
-                        <img src="http://www.hmall.net/data/uploads/2014/05/04/6a63f7365e4430b5d07791fd32c66500.jpg__260_260.jpg"
-                            alt="">
-                    </a>
-                </li>
-                <li class="li-2">
-                    <a href="javascript:void(0)
-                    ">BRIOSO格子衬衫 女 长袖2018春装新品上市BRIOSO格子衬衫 女 长袖2018春装新品上市BRIOSO格子衬衫 女 长袖2018春装新品上市</a>
-                </li>
-                <li class="li-3">
-                    <p>颜色：绿色</p>
-                    <p>尺码：XXL</p>
-                </li>
-                <li class="li-4">
-                    49.00
-                </li>
-                <li class="li-5">
-                    <a href="javascript:void(0)" class="num_add">+</a>
-                    <input type="text" value="1" class="buy_num">
-                    <a href="javascript:void(0)" class="num_del">-</a>
-                </li>
-                <li class="li-6"></li>
-                <li class="li-7">49.00</li>
-                <li class="li-8">
-                    <span class="iconfont icon-ziyuanldpi"></span>
-                </li>
-            </ul>
+
+
         </div>
         <div class="cart-footer">
             <div class="sum">
                 <span>商品总价(不含运费)：</span>
                 <p>￥</p>
-                <p>49.00</p>
+                <p class="sumprice">49.00</p>
             </div>
             <div class="btn">
                 <div class="btn-shopping">
@@ -124,6 +102,7 @@
             $("#footer").load("footer.html");
         })
     </script>
+    <script src="../js/shoppingcart.js"></script>
 </body>
 
 </html>

@@ -43,6 +43,11 @@
     .txt {
         display: flex;
         border-bottom: 1px solid #dddddd;
+        .li-0{
+            width: 5%;
+            flex-direction: row;
+            align-items: center;
+        }
         .li-1 {
             width: 10%;
             img {
@@ -51,7 +56,7 @@
             }
         }
         .li-2 {
-            width: 25%;
+            width: 20%;
             a {
                 overflow: hidden;
                 text-overflow: ellipsis;

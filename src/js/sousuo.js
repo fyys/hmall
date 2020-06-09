@@ -21,7 +21,7 @@
                 str += `
                     <li class="col">
                         <div class="header">
-                            <a href="detail.html">
+                            <a href="detail.html?sid=${value.goods_id}">
                                 <img class="lazy" data-original="${value.goods_big_logo}" >
                             </a>
                         </div>

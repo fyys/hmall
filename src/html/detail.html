@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="../css/detail.css">
     <link rel="stylesheet" href="../fonts/iconfont.css">
     <script src="https://cdn.bootcdn.net/ajax/libs/jquery/1.12.4/jquery.js"></script>
+    <script src="../libs/jquery.cookie.js"></script>
 </head>
 
 <body>
@@ -32,20 +33,25 @@
         <div class="cart_content">
             <!-- 放大镜 -->
             <div id="zoomBox">
+
+
                 <div id="smallArea">
-                    <img
-                        src="http://www.hmall.net/data/uploads/2014/05/04/6a63f7365e4430b5d07791fd32c66500.jpg__367_367.jpg">
-                    <img
-                        src="http://www.hmall.net/data/uploads/2014/05/04/6a63f7365e4430b5d07791fd32c66500.jpg__367_367.jpg">
+                    <span class="iconfont icon-arrowBottom-fill up"></span>
+                    <div id="smallpic">
+                        <ul ></ul>
+                    </div>
+                    <span class="iconfont icon-arrowBottom-fill down"></span>
                 </div>
+
+
                 <div id="midArea">
-                    <img
-                        src="http://www.hmall.net/data/uploads/2014/05/04/6a63f7365e4430b5d07791fd32c66500.jpg__367_367.jpg">
+                    <img id="midpic" src="">
                     <div id="zoom"></div>
                 </div>
+
+
                 <div id="bigArea">
-                    <img
-                        src="http://www.hmall.net/data/uploads/2014/05/04/6a63f7365e4430b5d07791fd32c66500.jpg__367_367.jpg">
+                    <img id="bigpic" src="">
                 </div>
 
             </div>
@@ -54,7 +60,7 @@
                 <li class="name">
                     <!-- 商品名称 -->
                     <h2>
-                        BRIOSO格子衬衫 女 长袖2018春装新品上市
+                        <!-- BRIOSO格子衬衫 女 长袖2018春装新品上市 -->
                     </h2>
                     <p>
                         <label for="">货号：</label>
@@ -63,8 +69,9 @@
                 </li>
                 <li class="line"></li>
                 <!-- 商品价格 -->
-                <li class="price">
-                    <span>49.00元</span>
+                <li class="goods-price">
+                    <span class="price"></span>
+                    <em>元</em>
                 </li>
 
                 <fieldset class="line-title">
@@ -75,14 +82,14 @@
                 <li class="buy">
                     <div class="num">
                         购买量 &nbsp;&nbsp;&nbsp;&nbsp;
-                        <a href="javascript:void(0)" class="num_add">+</a>
-                        <input type="text" value="1" class="buy_num">
                         <a href="javascript:void(0)" class="num_del">-</a>
+                        <input type="text" value="1" class="buy_num">
+                        <a href="javascript:void(0)" class="num_add">+</a>
                         &nbsp;&nbsp;&nbsp;&nbsp;库存：
                         <p>12</p>
                     </div>
                     <div class="buy_btn">
-                        <a href="javascript:void(0)" class="btn_a">
+                        <a href="../html/shoppingcart.html" class="btn_a">
                             立即购买
                         </a>
                         <a href="javascript:void(0)" class="btn_b">加入购物车</a>
@@ -103,8 +110,7 @@
             $("#footer").load("footer.html");
         });
     </script>
-    <!-- <script src="../js/detail-zoom.js"></script> -->
-    <!-- <script src="../js/detail.js"></script> -->
+    <script src="../js/detail.js"></script>
 </body>
 
 </html>

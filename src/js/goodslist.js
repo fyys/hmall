@@ -16,7 +16,7 @@
             str += `
                     <li class="col">
                         <div class="header">
-                            <a href="detail.html">
+                            <a href="detail.html?sid=${value.goods_id}">
                                 <img class="lazy" data-original="${value.goods_big_logo}" >
                             </a>
                         </div>
@@ -29,7 +29,7 @@
                             </li>
                         </ul>
                         <div class="footer">
-                            <a href="javascript:void(0)"><span>商品详情</span></a>
+                            <a href="detail.html?sid=${value.goods_id}"><span>商品详情</span></a>
                             <a href="javascript:void(0)"><span>关注</span></a>
                         </div>
                     </li>
@@ -46,7 +46,7 @@
         prev = null;
         next = null;
         //将页面的li元素加载到两个数组中
-        $('.col-r li').each(function (index, element) {
+        $('.row-4 .col').each(function (index, element) {
             array[index] = $(this);
             array_default[index] = $(this);
         });
@@ -55,7 +55,7 @@
     // 2.分页
     //告知后端当前请求的是第几页数据。将当前的页面页码传递给后端(get和page)
     $('.page').pagination({
-        pageCount: 17,//总的页数
+        pageCount: 8,//总的页数
         jump: true,//是否开启跳转到指定的页数，布尔值。
         coping: true,//是否开启首页和尾页，布尔值。
         prevContent: '上一页',
@@ -89,7 +89,7 @@
                                     </li>
                                 </ul>
                                 <div class="footer">
-                                    <a href="javascript:void(0)"><span>商品详情</span></a>
+                                    <a href="detail.html?sid=${value.goods_id}"><span>商品详情</span></a>
                                     <a href="javascript:void(0)"><span>关注</span></a>
                                 </div>
                             </li>
@@ -103,7 +103,7 @@
                 next = null;
 
                 //将页面的li元素加载到两个数组中
-                $('.col-r li').each(function (index, element) {
+                $('.row-4 .col').each(function (index, element) {
                     array[index] = $(this);
                     array_default[index] = $(this);
                 });
@@ -111,14 +111,18 @@
         }
     });
 
-    // //3.排序
-    $('button').eq(0).on('click', function () {
+
+    //3.排序
+    $('.select').children('a').eq(0).on('click', function () {
+       
+        $(this).addClass('current').siblings('a').removeClass('current')
         $.each(array_default, function (index, value) {
-            $('.list ul').append(value);
+            $('.list .row-4').append(value);
         });
         return;
     });
-    $('button').eq(1).on('click', function () {
+    $('.select').children('a').eq(1).on('click', function () {
+        $(this).addClass('current').siblings('a').removeClass('current')
         for (let i = 0; i < array.length - 1; i++) {
             for (let j = 0; j < array.length - i - 1; j++) {
                 prev = parseFloat(array[j].find('.price').html().substring(1));
@@ -138,16 +142,20 @@
         //append在追加的时候，如果追加的是jquery的元素对象，而jquery元素对象在你追加的元素中存在，直接取出存在的元素，从后面追加。
         //如果追加的是内容结构，依然和appendChild一样，后面继续追加。
         $.each(array, function (index, value) {
-            console.log(value);//n.fn.init [li, context: li]
-            $('.list ul').append(value);
+
+            // console.log(value);//n.fn.init [li, context: li]
+            $('.list .row-4').append(value);
         });
     });
-    $('button').eq(2).on('click', function () {
+    $('.select').children('a').eq(2).on('click', function () {
+        $(this).addClass('current').siblings('a').removeClass('current')
         for (let i = 0; i < array.length - 1; i++) {
             for (let j = 0; j < array.length - i - 1; j++) {
                 prev = parseFloat(array[j].find('.price').html().substring(1));
+                // console.log(prev)
                 next = parseFloat(array[j + 1].find('.price').html().substring(1));
-                //通过价格的判断，改变的是li的位置。
+                // console.log(next)
+                // //通过价格的判断，改变的是li的位置。
                 if (prev < next) {
                     let temp = array[j];
                     array[j] = array[j + 1];
@@ -158,9 +166,14 @@
         //清空原来的列表，将排序后的数据添加上去。
         //empty() : 删除匹配的元素集合中所有的子节点。
         // $('.list ul').empty();//清空原来的列表
+        //这里能够省略empty
+        //append在追加的时候，如果追加的是jquery的元素对象，而jquery元素对象在你追加的元素中存在，直接取出存在的元素，从后面追加。
+        //如果追加的是内容结构，依然和appendChild一样，后面继续追加。
         $.each(array, function (index, value) {
-            console.log(value);
-            $('.list ul').append(value);
+
+            // console.log(value);//n.fn.init [li, context: li]
+            $('.list .row-4').append(value);
         });
     })
+
 }(jQuery)
