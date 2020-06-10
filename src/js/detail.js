@@ -46,12 +46,10 @@
     const $up = $('.up'); //上箭头
     const $down = $('.down'); //下箭头
     const $list = $('#smallpic'); //小图列表
-    //$spic 中图   $bpic 大图  
 
-    //中放/大放=中图/大图
-    $sf.width($spic.width() * $bf.width() / $bpic.width());//小放的宽
-    $sf.height($spic.height() * $bf.height() / $bpic.height());//小放的高
-    let $bili = $bpic.width() / $spic.width(); //比例大于1 放大效果
+    $sf.width($spic.width() * $bf.width() / $bpic.width());
+    $sf.height($spic.height() * $bf.height() / $bpic.height());
+    let $bili = $bpic.width() / $spic.width(); 
 
 
     $spic.hover(function () {
@@ -139,7 +137,7 @@
     let arrnum = []; //存储商品的数量。
 
     //取出cookie
-    function cookietoarray() {
+    function getoldcookie() {
         if ($.cookie('cookiesid') && $.cookie('cookienum')) {
             arrsid = $.cookie('cookiesid').split(',');
             arrnum = $.cookie('cookienum').split(',');
@@ -154,19 +152,19 @@
         //获取当前商品对应的sid
         let $sid = location.search.substring(1).split('=')[1];
         //判断是第一次点击还是多次点击
-        cookietoarray();
+        getoldcookie();
         if ($.inArray($sid, arrsid) != -1) { //不为-1表示$sid存在
             // 取出已经存在的值进行增加再cookie
             let $num = parseInt(arrnum[$.inArray($sid, arrsid)]) + parseInt($('.buy_num').val());
             arrnum[$.inArray($sid, arrsid)] = $num;
             $.cookie('cookienum', arrnum, { expires: 10, path: '/' });
         } else {
-            arrsid.push($sid); //将编号$sid push到arrsid数组中
+            arrsid.push($sid);
             $.cookie('cookiesid', arrsid, { expires: 10, path: '/' });
-            arrnum.push($('.buy_num').val()); //将数量push到arrnum数组中
+            arrnum.push($('.buy_num').val()); 
             $.cookie('cookienum', arrnum, { expires: 10, path: '/' });
         }
-        alert('按钮触发了');
+        alert('商品成功加入购物车');
     });
 
     // 数量增减

@@ -135,15 +135,9 @@
                 }
             }
         }
-        //清空原来的列表，将排序后的数据添加上去。
-        //empty() : 删除匹配的元素集合中所有的子节点。
-        // $('.list ul').empty();//清空原来的列表
-        //这里能够省略empty
-        //append在追加的时候，如果追加的是jquery的元素对象，而jquery元素对象在你追加的元素中存在，直接取出存在的元素，从后面追加。
-        //如果追加的是内容结构，依然和appendChild一样，后面继续追加。
         $.each(array, function (index, value) {
 
-            // console.log(value);//n.fn.init [li, context: li]
+            // console.log(value);
             $('.list .row-4').append(value);
         });
     });
@@ -163,15 +157,9 @@
                 }
             }
         }
-        //清空原来的列表，将排序后的数据添加上去。
-        //empty() : 删除匹配的元素集合中所有的子节点。
-        // $('.list ul').empty();//清空原来的列表
-        //这里能够省略empty
-        //append在追加的时候，如果追加的是jquery的元素对象，而jquery元素对象在你追加的元素中存在，直接取出存在的元素，从后面追加。
-        //如果追加的是内容结构，依然和appendChild一样，后面继续追加。
         $.each(array, function (index, value) {
 
-            // console.log(value);//n.fn.init [li, context: li]
+            // console.log(value);
             $('.list .row-4').append(value);
         });
     })

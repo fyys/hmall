@@ -19,7 +19,7 @@
         </a>
     </div>
     <div id="bg">
-        <form action="" method="" class="logon">
+        <form action="http://127.0.0.1/worktwo/hmall/php/logon.php" method="POST" class="logon">
             <ul>
                 <li>
                     <div>会员注册</div>
@@ -27,31 +27,52 @@
                 </li>
                 <li>
                     <div>
-                        <label for="e-mail" class="default">
-                            <span class="iconfont icon-zhanghao"></span>
-                        </label>
-                        <input type="text" id="e-mail" placeholder="邮箱" class="default">
-                        <span class="e-mail"></span></div>
+                        <div>
+                            <label for="username" class="default">
+                                <span class="iconfont icon-zhanghao"></span>
+                            </label>
+                            <input type="text" id="username" placeholder="用户名" class="default" name="username">
+                        </div>
+
+                        <span class="username tishi"></span>
+                    </div>
                 </li>
                 <li>
                     <div>
-                        <label for="password" class="default">
-                            <span class="iconfont icon-mima"></span>
-                        </label>
-                        <input type="password" id="password" placeholder="密码" class="default">
-                        <span class="password"></span></div>
+                        <div>
+                            <label for="password" class="default">
+                                <span class="iconfont icon-mima"></span>
+                            </label>
+                            <input type="password" id="password" placeholder="密码" class="default" name="password">
+                        </div>
+                        <span class="password tishi"></span>
+                    </div>
                 </li>
                 <li>
                     <div>
-                        <label for="password-two" class="default">
-                            <span class="iconfont icon-222yonghu_mima_yuechi2"></span>
-                        </label>
-                        <input type="password-two" id="password-two" placeholder="确认密码" class="default">
-                        <span class="password-two"></span></div>
+                        <div>
+                            <label for="repass" class="default">
+                                <span class="iconfont icon-222yonghu_mima_yuechi2"></span>
+                            </label>
+                            <input type="password" id="repass" placeholder="确认密码" class="default" name="repass">
+                        </div>
+                        <span class="repass tishi"></span>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <div>
+                            <label for="e-mail" class="default">
+                                <span class="iconfont icon-youxiang"></span>
+                            </label>
+                            <input type="text" id="e-mail" placeholder="邮箱" class="default" name="email">
+                        </div>
+                        <span class="e-mail tishi"></span>
+                    </div>
                 </li>
 
                 <li>
-                    <input class="btn" type="submit" value="登录">
+                    <input class="btn tishi" type="submit" value="注册" name="submit">
                 </li>
             </ul>
         </form>
@@ -61,6 +82,8 @@
             hmall商城&copy;2010-2020保留所有权！
         </div>
     </div>
+    <script src="../js/logon.js"></script>
 </body>
+
 
 </html>
