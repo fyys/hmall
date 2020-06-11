@@ -31,7 +31,7 @@
         });
         $row4.html(str);
 
-        //未循环只改变一次
+        
         $('#main-louceng').children().eq(0).children('.col-r').children('.row-4').children().eq(2).addClass('col-2').removeClass('col-1')
         $('#main-louceng').children().eq(1).children('.col-r').children('.row-4').children().eq(0).addClass('col-2').removeClass('col-1')
         $('#main-louceng').children().eq(2).children('.col-r').children('.row-4').children().eq(4).addClass('col-2').removeClass('col-1')
