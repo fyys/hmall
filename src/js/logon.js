@@ -61,9 +61,8 @@
             let regnum = /\d+/;
             let regupper = /[A-Z]+/;
             let reglower = /[a-z]+/;
-            let regother = /[\W\_]+/; //其他字符
+            let regother = /[\W\_]+/; 
 
-            //test():匹配存在感
             let $count = 0; //计数
 
             if (regnum.test($pass)) {
