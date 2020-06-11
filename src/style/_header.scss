@@ -218,10 +218,8 @@
         .sub-3 {
             display: flex;
             align-items: center;
-            width: 145px;
             height: 42px;
             background-color: $color;
-            padding-left: 15px;
             margin-top: 10px;
             border: 1px solid #c01111;
             position: relative;
@@ -229,6 +227,10 @@
                 display: block;
             }
             a {
+                width: 145px;
+                height: 42px;
+                padding-left: 15px;
+                line-height: 42px;
                 @include fontff14();
             }
             .iconfont {
