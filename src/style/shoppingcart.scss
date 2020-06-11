@@ -116,7 +116,7 @@
             padding: 10px;
             margin: 20px 0;
             display: flex;
-            justify-content: flex-end;
+            justify-content: space-between;
             align-items: center;
             span {
                 @include font3314();
@@ -125,6 +125,13 @@
                 font-size: 24px;
                 color: #333333;
                 font-weight: bolder;
+            }
+            >div{
+                display: flex;
+                align-items: center;
+            }
+            .delck{
+                cursor: pointer;
             }
         }
         .btn {

@@ -143,4 +143,16 @@
             sumAllprice(); //计算总价
         }
     });
+    $('.delck').on('click', function() {
+        getoldcookie();
+        if (window.confirm('你确定要全部删除吗?')) {
+            $('.goods-main:visible').each(function() {
+                if ($(this).find(':checkbox').is(':checked')) { 
+                    $(this).remove();
+                    delcookie($(this).find('img').attr('sid'), arrsid);
+                }
+            });
+            sumAllprice(); //计算总价
+        }
+    });
 }(jQuery);

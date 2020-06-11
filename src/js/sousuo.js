@@ -1,11 +1,6 @@
 !function ($) {
     const $sousuo = $('.search-keyword');
-    const $btn = $('.btn-search');
-    const $row4 = $('.row-4')
-    let array_default = [];//排序前的li数组
-    let array = [];//排序中的数组
-    let prev = null;
-    let next = null;
+    const $content = $('.sousuo-content ul')
 
     $sousuo.on('input', function () {
         $.ajax({
@@ -19,42 +14,27 @@
             let str = '';
             $.each(data, function (index, value) {
                 str += `
-                    <li class="col">
-                        <div class="header">
-                            <a href="detail.html?sid=${value.goods_id}">
-                                <img class="lazy" data-original="${value.goods_big_logo}" >
-                            </a>
-                        </div>
-                        <ul class="main">
-                            <li class="name">
-                                <a href="javascript:void(0)">${value.goods_name}</a>
-                            </li>
-                            <li>
-                                <span class="price">￥${value.goods_price}</span>
-                            </li>
-                        </ul>
-                        <div class="footer">
-                            <a href="javascript:void(0)"><span>商品详情</span></a>
-                            <a href="javascript:void(0)"><span>关注</span></a>
-                        </div>
-                    </li>
+                    <li>${value.goods_name}</li>
             `;
             });
-            $row4.html(str);
-            // 添加懒加载
-            $(function () {
-                $("img.lazy").lazyload({ effect: "fadeIn" });
-            });
+            $content.html(str);
+        })
+        if ($sousuo.val()) {
+            $content.css({
+                display: 'flex'
+            })
+        } else {
+            $content.css({
+                display: 'none'
+            })
+        }
+    })
 
-            array_default = [];//排序前的li数组
-            array = [];//排序中的数组
-            prev = null;
-            next = null;
-            //将页面的li元素加载到两个数组中
-            $('.col-r li').each(function (index, element) {
-                array[index] = $(this);
-                array_default[index] = $(this);
-            });
+    $content.on('click', 'li', function () {
+        $sousuo.val($(this).html())
+        $content.css({
+            display: 'none'
         })
     })
+
 }(jQuery)

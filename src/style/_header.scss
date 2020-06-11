@@ -161,6 +161,7 @@
                 border: 1px solid $color;
             }
             .btn-search {
+                user-select: none;
                 background-color: $color;
                 @include fontff14();
                 width: 62px;
@@ -170,6 +171,35 @@
                 line-height: 42px;
                 cursor: pointer;
             }
+        }
+        .sousuo-content{
+            z-index: 1000;
+            position: absolute;
+            top:44px;
+            left: 40px;
+            height: 160px;
+            background-color: #ffffff;
+            overflow: hidden;
+            ul{
+                display: none;
+                margin-top: 5px;
+                display: flex;
+                flex-direction: column;
+                li{
+                    cursor: pointer;
+                    margin-top: 5px;
+                    margin-left: 5px;
+                    width: 300px;
+                    height: 20px;
+                    @include overflow();
+                    @include font3314();
+                    &:hover{
+                        background-color: #ccc;
+                    }
+                    
+                }
+            }
+            
         }
         .tags {
             position: absolute;

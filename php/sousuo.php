@@ -4,7 +4,7 @@ include "conn.php";
 if (isset($_POST['goodsname'])) {
     $name = $_POST['goodsname'];
 
-    $sql1 = "select * from goods  where goods_name like '%$name%'";
+    $sql1 = "select * from goods  where cat_id like '%$name%'";
     $res = $conn->query($sql1);
 
     //通过二维数组输出
@@ -14,7 +14,6 @@ if (isset($_POST['goodsname'])) {
     for ($i = 0; $i < $res->num_rows; $i++) {
         $arr[$i] = $res->fetch_assoc();
     }
-
     echo json_encode($arr); //输出接口
-    // header('location:http://127.0.0.1/worktwo/hmall/dist/html/goodslist.html');
+    
 }
